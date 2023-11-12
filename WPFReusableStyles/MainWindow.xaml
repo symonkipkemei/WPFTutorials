@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPFReusableStyles.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFReusableStyles"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="300">
+    
+    
+    
+    <!-- Introducing customs styles to our application-->
+
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center">
+
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox/>
+            <TextBox Width="250"/>
+            <!--overide settings of the custom style-->
+            <Button />
+            <Button />
+            
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <StackPanel Margin="20">
+                <Button Style="{StaticResource ConfirmationButton}"/>
+                <TextBox/>
+                <Button Height="50" Width="150" Margin="5"/>
+            </StackPanel>
+            
+        </Grid>
+       
+    </Grid>
+        
+</Window>

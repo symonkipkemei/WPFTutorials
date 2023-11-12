@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPFStackPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFStackPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions >
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel  Grid.Row="1" Width="300" HorizontalAlignment="Left" Margin="20">
+            <TextBox Name="tbFirstName" Text="Symon" Margin="2" Height="50" />
+            <Button Name="btName" Content="Email" HorizontalContentAlignment="Left" Margin="2" Height="20" />
+            <TextBox Name="tbSecondName" Text="Kipkemei" Margin="2" />
+            <TextBox Name="tbGirlFriend" Text="Diana" Margin="2"  Height="30" />
+            
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20"  Grid.Row="0" HorizontalAlignment="Center" Width="400">
+          
+            <TextBox Name="tbSecondNameToo" Text="Kipkemei" Margin="2" Height="50" Width="100" />
+            <TextBox Name="tbGirlFriendToo" Text="Diana" Margin="2"  Height="50" Width="100" />
+        </StackPanel>
+
+    </Grid>
+</Window>

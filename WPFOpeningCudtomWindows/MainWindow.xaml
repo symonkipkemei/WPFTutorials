@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPFOpeningCudtomWindows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFOpeningCudtomWindows"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Grid>
+
+        <StackPanel >
+            <Button Name="btNormal" Content="Normal" Width="100" Height="40"  Margin="5 " Click="Click_btnNormal"/>
+            <Button Name="btnModal" Content="Modal" Width="100" Height="40"  Margin="5 " Click="Click_btnModal"/>
+            <TextBox Name="txInput" Width="200" Height="40" FontSize="20" />
+        </StackPanel>
+
+    </Grid>
+</Window>

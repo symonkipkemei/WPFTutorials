@@ -1,0 +1,39 @@
+﻿<Window x:Class="WPFCustomizeWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCustomizeWindow"
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="300" Width="300"
+        
+        WindowStyle="None" MouseLeftButtonDown="Click_leftButtonDown"
+        Background="Black">
+
+    <!-- Window style modified to none to allow adjustments to be made on it's style-->
+
+    <!-- Hides the white strip at the top edge of the window -->
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnMinimize" Content="-" Width="40" Height="40" BorderBrush="Transparent"
+                    Background="Transparent" Click="Click_btnMinimize" Foreground="White"/>
+            <Button x:Name="btnMaximize" Content="O" Width="40" Height="40" BorderBrush="Transparent" 
+                    Background="Transparent" Click="Click_btnMaximize" Foreground="White" />
+            <Button x:Name="btnClose" Content="X" Width="40" Height="40" BorderBrush="Transparent" 
+                    Background="Transparent" Click="Click_btnClose" Foreground="White" />
+            
+
+        </StackPanel>
+
+    </Grid>
+</Window>

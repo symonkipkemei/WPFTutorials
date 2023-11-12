@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="WPFUserControl.View.UserControls.MenuBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFUserControl.View.UserControls"
+             mc:Ignorable="d" 
+             Height="70" d:DesignWidth="800">
+    <!-- user control grid that controls the top part of the code-->
+    <!--This part fits automatically into the first row   and first column ofof the main grid-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <!--Lets insert menus into our code-->
+
+        <Grid Grid.Row="0">
+            <Menu >
+                <MenuItem Header="File" FontSize="15" >
+                    <MenuItem Header="Exit"/>
+                </MenuItem>
+                <MenuItem Header="Edit" FontSize="15"/>
+                <MenuItem Header="View" FontSize="15"/>
+                <MenuItem Header="Git" FontSize="15"/>
+                <MenuItem Header="Project" FontSize="15"/>
+                <MenuItem Header="Build" FontSize="15"/>
+            </Menu>
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <!--Define columns in this grid-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Insert buttons and text boxes into this Grid-->
+            <Button Name="btnCheck" Content="Check" Width="100" Margin="5" Grid.Column="0"/>
+            <TextBox Name="txtWrite" Width="150" Grid.Column="1" Text="Fill me up" Margin="5"/>
+        </Grid>
+    </Grid>
+</UserControl>

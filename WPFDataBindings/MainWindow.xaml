@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPFDataBindings.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDataBindings"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="left" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="UltraLight" />
+        </Style>
+
+
+        <Style TargetType="TextBox" x:Key="textLabels">
+            <Setter Property="HorizontalAlignment" Value="left" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="light" />
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        
+
+
+    </Window.Resources>
+    <Grid x:Name="gridName">
+       
+        <!--Stack panel with labels on it-->
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Name:"/>
+            <TextBox Text="{Binding Name, Mode=OneWay}" Style="{StaticResource textLabels}"/>
+            <Label Content="Adrress:"/>
+            <TextBox Text="{Binding Address}" Style="{StaticResource textLabels}"/>
+            <Label Content="Email:"/>
+            <TextBox Text="{Binding Email}" Style="{StaticResource textLabels}"/>
+            <Label Content="Number:"/>
+            <TextBox Text="{Binding Number}" Style="{StaticResource textLabels}"/>
+            <Button Name="btnShow" Grid.Column="1" Content="Show" Width="auto" Height="40" Margin="0,20" Click="Click_btnShow" />
+        </StackPanel>
+       
+    </Grid>
+</Window>
