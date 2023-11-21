@@ -16,7 +16,7 @@ namespace WPFViewModels.ViewModel
         public RelayCommand AddCommand => new RelayCommand(execute =>AddItem());
         public RelayCommand DeleteCommand => new RelayCommand(execute => DeleteItem(), canExecute => SelectedItem != null);
 
-        public RelayCommand SaveCommand => new RelayCommand(execute => Save(), canExecute => canSave());
+        public RelayCommand SaveCommand => new RelayCommand(execute => Save());
         //constructor
         public MainWindowViewModel()
         {
